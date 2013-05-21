@@ -1,0 +1,57 @@
+﻿<section>
+    <fieldset id="trip">
+        <legend>Trip</legend>
+        <form class="form-horizontal" >
+            <div class="trip" data-bind="with: trip">
+                <div class="control-group left">
+                    <label class="control-label" for="StartMilage">Start milage</label>
+                    <div class="controls">
+                        <input type="number" id="StartMilage" placeholder="Start milage" data-bind="value: startMilage" />
+                    </div>
+                </div>
+                <div class="control-group right">
+                    <label class="control-label" for="EndMilage">End milage</label>
+                    <div class="controls">
+                        <input type="number" id="EndMilage" placeholder="End milage" data-bind="value: endMilage" />
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="PlaceOfDeparture">Place of departure</label>
+                    <div class="controls">
+                        <input type="text" id="PlaceOfDeparture" placeholder="Place of departure" data-bind="value: placeOfDeparture" />
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="Destination">Destination</label>
+                    <div class="controls">
+                        <input type="text" id="Destination" placeholder="Destination" data-bind="value: destination" />
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="Description">Description</label>
+                    <div class="controls">
+                        <input type="text" id="Description" placeholder="Description" data-bind="value: description" />
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="Description">Date</label>
+                    <div class="controls">
+                        <input type="date" id="DateTime" placeholder="Date" data-bind="dateString: dateTime" />
+                    </div>
+                </div>
+                <div class="controls center">
+                    <div class="btn-group">
+                        <button class="btn" data-bind="click: function () { tripType(0) }, css: { active: tripType() == 0, 'btn-blue': tripType() == 0 }" value="0">Business</button>
+                        <button class="btn" data-bind="click: function () { tripType(1) }, css: { active: tripType() == 1, 'btn-blue': tripType() == 1 }" value="1">Private</button>
+                    </div>
+                </div>
+            </div>
+            <div class="control-group">
+                <div class="controls">
+                    <button type="submit" class="btn btn-primary top20 large" data-bind="click: save">Save</button>
+                </div>
+            </div>
+        </form>
+    </fieldset>
+
+</section>
